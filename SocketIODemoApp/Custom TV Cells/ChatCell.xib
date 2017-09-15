@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellChat" rowHeight="90" id="F62-I8-xka" customClass="ChatCell" customModule="SocketIODemoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F62-I8-xka" id="8ud-zM-z7L">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iw2-Ih-AWZ">
+                        <rect key="frame" x="10" y="10" width="300" height="69.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BubbleIncoming" translatesAutoresizingMaskIntoConstraints="NO" id="TZ7-gt-gvL">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-vB-1NI">
+                                <rect key="frame" x="20" y="5" width="260" height="33.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-4r-fuH">
+                                <rect key="frame" x="20" y="43.5" width="260" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Gabriel at 18:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuJ-v8-Xlf">
+                                        <rect key="frame" x="10" y="3" width="118" height="15"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZuJ-v8-Xlf" firstAttribute="centerY" secondItem="t8f-4r-fuH" secondAttribute="centerY" id="9RV-ai-aDA"/>
+                                    <constraint firstItem="ZuJ-v8-Xlf" firstAttribute="leading" secondItem="t8f-4r-fuH" secondAttribute="leading" constant="10" id="bOc-1h-pe5"/>
+                                    <constraint firstAttribute="height" constant="21" id="rGu-OC-99U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TZ7-gt-gvL" secondAttribute="bottom" id="2pc-03-eHn"/>
+                            <constraint firstItem="TZ7-gt-gvL" firstAttribute="leading" secondItem="Iw2-Ih-AWZ" secondAttribute="leading" id="672-kC-HHU"/>
+                            <constraint firstItem="vGY-vB-1NI" firstAttribute="leading" secondItem="Iw2-Ih-AWZ" secondAttribute="leading" constant="20" id="6GS-D8-J1h"/>
+                            <constraint firstAttribute="trailing" secondItem="TZ7-gt-gvL" secondAttribute="trailing" id="6Vx-bE-wdb"/>
+                            <constraint firstItem="TZ7-gt-gvL" firstAttribute="top" secondItem="Iw2-Ih-AWZ" secondAttribute="top" id="6uG-ZC-IbS"/>
+                            <constraint firstAttribute="trailing" secondItem="vGY-vB-1NI" secondAttribute="trailing" constant="20" id="Cgf-it-WV9"/>
+                            <constraint firstItem="vGY-vB-1NI" firstAttribute="top" secondItem="Iw2-Ih-AWZ" secondAttribute="top" constant="5" id="Il9-lt-pOd"/>
+                            <constraint firstAttribute="trailing" secondItem="t8f-4r-fuH" secondAttribute="trailing" constant="20" id="ZS3-6x-P1U"/>
+                            <constraint firstItem="t8f-4r-fuH" firstAttribute="top" secondItem="vGY-vB-1NI" secondAttribute="bottom" constant="5" id="hpM-xT-uhM"/>
+                            <constraint firstItem="t8f-4r-fuH" firstAttribute="leading" secondItem="Iw2-Ih-AWZ" secondAttribute="leading" constant="20" id="uGh-Dx-DkQ"/>
+                            <constraint firstAttribute="bottom" secondItem="t8f-4r-fuH" secondAttribute="bottom" constant="5" id="uV0-Kb-K99"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Iw2-Ih-AWZ" secondAttribute="trailing" constant="10" id="J4R-VV-uaI"/>
+                    <constraint firstAttribute="bottom" secondItem="Iw2-Ih-AWZ" secondAttribute="bottom" constant="10" id="TKL-VE-OXf"/>
+                    <constraint firstItem="Iw2-Ih-AWZ" firstAttribute="leading" secondItem="8ud-zM-z7L" secondAttribute="leading" constant="10" id="gyi-8H-hkk"/>
+                    <constraint firstItem="Iw2-Ih-AWZ" firstAttribute="top" secondItem="8ud-zM-z7L" secondAttribute="top" constant="10" id="r0R-qr-bEP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="bubbleImage" destination="TZ7-gt-gvL" id="bBa-Cg-pAN"/>
+                <outlet property="lblChatMessage" destination="vGY-vB-1NI" id="YXj-Ms-qiB"/>
+                <outlet property="lblMessageDetails" destination="ZuJ-v8-Xlf" id="sQu-zY-NMu"/>
+            </connections>
+            <point key="canvasLocation" x="903" y="305"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="BubbleIncoming" width="38" height="34"/>
+    </resources>
+</document>
